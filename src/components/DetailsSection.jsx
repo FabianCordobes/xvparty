@@ -7,17 +7,17 @@ const DetailsSection = () => {
     <div className="pb-20 text-center xl:ml-[15rem] flex flex-col place-items-center" id="details">
       {/* Marco con texto y título animados */}
       <motion.div
-        className="mb-[30px] relative h-[570px] bg-contain bg-center w-[470px]"
+        className="mb-[30px] relative h-[455px] bg-contain bg-center w-[375px]"
         style={{ backgroundImage: `url(${flowerImage})` }}
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         <motion.div className="max-w-[300px]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
-          <p className="text-[1.7rem] text-black relative left-[85px] top-[170px]">
+          <p className="text-[1.4rem] text-black relative left-[40px] top-[140px]">
             Hay momentos inolvidables que se atesoran en el corazón para siempre, por esa razón, quiero que compartas conmigo este día tan especial:
           </p>
-          <h2 className="text-[2.5rem] text-black font-extrabold relative left-[85px] top-[165px]">Mis 15 años</h2>
+          <h2 className="text-[2.5rem] text-black font-extrabold relative left-[35px] top-[140px]">Mis 15 años</h2>
         </motion.div>
       </motion.div>
 

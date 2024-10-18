@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const HeroSection = () => {
   return (
-    <div className="relative h-screen bg-cover bg-center w-[99vw]" style={{ backgroundImage: `url(${flowerImage})` }}>
+    <div className="relative h-screen bg-cover bg-center w-[100vw]" style={{ backgroundImage: `url(${flowerImage})` }}>
       {/* Overlay opcional */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
