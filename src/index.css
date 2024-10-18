@@ -9,7 +9,7 @@
   overflow-x: hidden;
 
   color-scheme: light dark;
-  color: #ffffff;
+  color: #000;
   /* background-image: linear-gradient(to left bottom, #fbdcf3, #f7d3ef, #f2caeb, #edc2e7, #e8b9e3); */
   background: rgb(255,170,214);
 background: linear-gradient(12deg, rgba(255,170,214,1) 35%, rgb(213, 156, 178) 100%);
