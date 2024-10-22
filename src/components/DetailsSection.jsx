@@ -25,6 +25,9 @@ const DetailsSection = () => {
           <h2 className="text-[2.5rem] md:text-[3rem] text-black font-extrabold mt-4">
             Mis 15 años
           </h2>
+          <h2 className="text-[2.5rem] md:text-[3rem] text-black font-extrabold mt-4 ">
+            Catalina.
+          </h2>
         </motion.div>
       </motion.div>
 
