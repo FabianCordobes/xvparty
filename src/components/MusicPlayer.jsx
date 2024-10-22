@@ -3,7 +3,7 @@ import { FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
 
 const MusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false); // Estado para saber si está sonando
-  const [audio] = useState(new Audio('/public/laflor.mp3')); // Crear el elemento de audio
+  const [audio] = useState(new Audio('/assets/laflor.mp3')); // Crear el elemento de audio
  
 
   // Función para pausar y reanudar la reproducción
