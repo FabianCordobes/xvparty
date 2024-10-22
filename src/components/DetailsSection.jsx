@@ -56,7 +56,7 @@ const DetailsSection = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <h3 className="text-[2rem] font-extrabold">Fecha y Hora</h3>
-          <p className="text-[1.5rem]">Viernes, 27 de octubre, 2024 - 21:00 hrs</p>
+          <p className="text-[1.5rem]">Viernes, 27 de diciembre, 2024 - 21:00 hrs</p>
         </motion.div>
 
         {/* Ubicación con animación */}
