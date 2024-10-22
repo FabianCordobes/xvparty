@@ -1,52 +1,32 @@
-import React, { useState } from 'react';
-import { Howl } from 'howler';
+import React, { useState, useEffect } from 'react';
 import { FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
 
 const MusicPlayer = () => {
-  const [isMuted, setIsMuted] = useState(false);
-  const [sound, setSound] = useState(null);
+  const [isPlaying, setIsPlaying] = useState(false); // Estado para saber si está sonando
+  const [audio] = useState(new Audio('/public/laflor.mp3')); // Crear el elemento de audio
+ 
 
-  // Función para inicializar y reproducir el audio
-  const playMusic = () => {
-    if (!sound) {
-      const music = new Howl({
-        src: ['/assets/laflor.mp3'], // Ruta del archivo de audio
-        autoplay: true, // Comienza a reproducirse al hacer clic
-        loop: true, // Repetir en bucle
-        volume: 0.5, // Volumen inicial (0 a 1)
-      });
-
-      setSound(music);
-      music.play(); // Iniciar la reproducción del audio
-    }
-  };
-
-  // Función para manejar el mute/unmute
-  const toggleMute = () => {
-    if (sound) {
-      if (isMuted) {
-        sound.mute(false); // Activar sonido
-      } else {
-        sound.mute(true); // Silenciar
-      }
-      setIsMuted(!isMuted); // Actualizar estado
+  // Función para pausar y reanudar la reproducción
+  const togglePlayPause = () => {
+    if (isPlaying) {
+      audio.pause(); // Pausar si está sonando
     } else {
-      playMusic(); // Iniciar música en caso de que no se haya iniciado
-      setIsMuted(false); // Asegurar que no esté muteado al iniciar
+      audio.play(); // Reanudar si está pausado
     }
+    setIsPlaying(!isPlaying); // Cambiar el estado de reproducción
   };
 
   return (
     <div className="fixed bottom-[7rem] right-[2rem] xl:bottom-8 xl:right-12 z-50">
-      {/* Botón de mute/unmute */}
+      {/* Botón de play/pause */}
       <button
-        onClick={toggleMute}
+        onClick={togglePlayPause}
         className="bg-gray-200 p-3 rounded-full shadow-lg hover:bg-gray-300 transition duration-300"
       >
-        {isMuted ? (
-          <FaVolumeMute className="text-2xl" />
-        ) : (
+        {isPlaying ? (
           <FaVolumeUp className="text-2xl" />
+        ) : (
+          <FaVolumeMute className="text-2xl" />
         )}
       </button>
     </div>
