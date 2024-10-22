@@ -28,22 +28,23 @@ const CountdownTimer = () => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    // Cleanup the timer on component unmount
     return () => clearInterval(timer);
   }, []);
 
   return (
     <div className="py-[1rem] text-center xl:ml-[15rem]">
       <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-[3rem] font-lora mb-10">Cuenta Regresiva</h2>
-        </motion.div>
-      <div className="flex justify-center space-x-10 text-4xl font-bold">
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h2 className="text-[3rem] font-lora mb-10">Cuenta Regresiva</h2>
+      </motion.div>
+
+      <div className="flex justify-center space-x-4 text-4xl font-bold ">
         {/* Días */}
         <motion.div
+          className="bg-white shadow-md border border-gray-300 p-4 rounded-lg text-black"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -54,6 +55,7 @@ const CountdownTimer = () => {
 
         {/* Horas */}
         <motion.div
+          className="bg-white shadow-md border border-gray-300 p-4 rounded-lg text-black"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -64,6 +66,7 @@ const CountdownTimer = () => {
 
         {/* Minutos */}
         <motion.div
+          className="bg-white shadow-md border border-gray-300 p-4 rounded-lg text-black"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -74,6 +77,7 @@ const CountdownTimer = () => {
 
         {/* Segundos */}
         <motion.div
+          className="bg-white shadow-md border border-gray-300 p-4 rounded-lg text-black"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}

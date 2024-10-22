@@ -3,25 +3,37 @@ import { Howl } from 'howler';
 import { FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
 
 const MusicPlayer = () => {
-  // Crear instancia de Howler
-  const sound = new Howl({
-    src: ['/path-to-your-audio-file.mp3'], // Ruta del archivo de audio
-    autoplay: true, // Comienza a reproducirse al cargar
-    loop: true, // Repetir en bucle
-    volume: 0.5, // Volumen inicial (0 a 1)
-  });
-
-  // Estado para controlar si el audio está muteado o no
   const [isMuted, setIsMuted] = useState(false);
+  const [sound, setSound] = useState(null);
+
+  // Función para inicializar y reproducir el audio
+  const playMusic = () => {
+    if (!sound) {
+      const music = new Howl({
+        src: ['/assets/laflor.mp3'], // Ruta del archivo de audio
+        autoplay: true, // Comienza a reproducirse al hacer clic
+        loop: true, // Repetir en bucle
+        volume: 0.5, // Volumen inicial (0 a 1)
+      });
+
+      setSound(music);
+      music.play(); // Iniciar la reproducción del audio
+    }
+  };
 
   // Función para manejar el mute/unmute
   const toggleMute = () => {
-    if (isMuted) {
-      sound.mute(false); // Activar sonido
+    if (sound) {
+      if (isMuted) {
+        sound.mute(false); // Activar sonido
+      } else {
+        sound.mute(true); // Silenciar
+      }
+      setIsMuted(!isMuted); // Actualizar estado
     } else {
-      sound.mute(true); // Silenciar
+      playMusic(); // Iniciar música en caso de que no se haya iniciado
+      setIsMuted(false); // Asegurar que no esté muteado al iniciar
     }
-    setIsMuted(!isMuted); // Actualizar estado
   };
 
   return (

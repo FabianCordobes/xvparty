@@ -66,20 +66,6 @@ const RSVPForm = () => {
             />
           </div>
 
-          {/* Correo electrónico */}
-          <div className="mb-4">
-            <label className="block text-lg mb-2">Correo Electrónico</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-slate-100"
-              placeholder="Escribe tu correo"
-              required
-            />
-          </div>
-
           {/* Asistencia */}
           <div className="mb-4">
             <label className="block text-lg mb-2">¿Asistirás?</label>

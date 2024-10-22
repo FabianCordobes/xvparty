@@ -12,9 +12,6 @@ function App() {
 
   return (
     <>
-      <div id="home">
-        <HeroSection />
-      </div>
       <div id="details">
         <DetailsSection />
       </div>
