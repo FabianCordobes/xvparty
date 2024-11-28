@@ -3,9 +3,7 @@ import React, { useState } from 'react';
 const RSVPForm = () => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     attending: '',
-    guests: 0,
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
 
@@ -20,8 +18,8 @@ const RSVPForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validación básica
-    if (!formData.name || !formData.email || formData.attending === '') {
+    // Validación básica: comprobar si los campos requeridos están completos
+    if (!formData.name.trim() || (formData.attending !== 'yes' && formData.attending !== 'no')) {
       alert('Por favor, completa todos los campos.');
       return;
     }
@@ -37,7 +35,7 @@ const RSVPForm = () => {
       });
 
       if (response.ok) {
-        setFormSubmitted(true);
+        setFormSubmitted(true); // Mostrar mensaje de confirmación
       } else {
         alert('Hubo un problema al enviar el formulario.');
       }
