@@ -48,7 +48,7 @@ const RSVPForm = () => {
   };
 
   return (
-    <div className="py-20 px-8 text-center xl:ml-[15rem] mb-16" id="rsvp">
+    <div className="py-20 px-8 text-center xl:ml-[15rem] " id="rsvp">
       <h2 className="text-4xl font-lora mb-10">Confirma tu Asistencia</h2>
       {!formSubmitted ? (
         <form className="max-w-lg mx-auto" onSubmit={handleSubmit}>

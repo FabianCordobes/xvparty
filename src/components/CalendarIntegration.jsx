@@ -41,28 +41,18 @@ END:VCALENDAR`;
   };
 
   return (
-    <div className="pb-20 text-center xl:ml-[15rem] flex flex-col items-center mb-[6rem]" id="calendar">
-      <h2 className="text-4xl font-lora mb-10">Agrega el Evento a tu Calendario</h2>
-      <div className="space-y-6 lg:w-[22rem] flex flex-col">
-        {/* Enlace para Google Calendar */}
-        <a
-          href={googleCalendarLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300"
-        >
-          Agregar a Google Calendar
-        </a>
-
-        {/* Botón para iCal */}
-        <button
-          onClick={handleDownloadICal}
-          className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-700 transition duration-300"
-        >
-          Descargar para iCal/Outlook
-        </button>
-      </div>
+    <div
+    className="border-2 border-dashed border-gray-400 bg-white px-[20px] py-8 max-w-[90%] md:max-w-[60%] rounded-lg ml-6 mb-28"
+    >
+    <div className=" text-center xl:ml-[15rem] flex flex-col items-center" id="calendar">
+      <h3 className="text-4xl font-lora mb-10">Si está en vos de hacerme un regalo y no sabes que...</h3>
+      <h3 className="text-4xl font-lora mb-10">
+        Mi cvu es: <span className='text-2xl'>0000003100042872321614</span> 
+      </h3>
+      <h3 className="text-4xl font-lora mb-10 max-w-xs">
+        Mi alias es: <span className='text-4xl'>catalina.2812</span>       </h3>
     </div>
+    </div>   
   );
 };
 
