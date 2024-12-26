@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const CountdownTimer = () => {
   const calculateTimeLeft = () => {
-    const eventDate = new Date('2024-12-28T20:00:00');
+    const eventDate = new Date('2024-12-27T21:00:00');
     const currentTime = new Date();
     const difference = eventDate - currentTime;
 
