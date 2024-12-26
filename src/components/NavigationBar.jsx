@@ -76,26 +76,6 @@ const NavigationBar = () => {
           </span>
         </Link>
 
-        {/* Calendario */}
-        <Link
-          to="calendar"
-          smooth={true}
-          duration={500}
-          spy={true}
-          onSetActive={() => handleSetActive('calendar')}
-          className={`flex flex-col items-center cursor-pointer ${
-            activeSection === 'calendar' ? 'text-pink-600' : 'text-gray-400'
-          }`}
-        >
-          <FaCalendarAlt className="text-2xl" />
-          <span
-            className={`mt-1 ${
-              activeSection === 'calendar' ? 'border-b-2 border-pink-600' : ''
-            }`}
-          >
-            Calendario
-          </span>
-        </Link>
 
         <MusicPlayer />
 
